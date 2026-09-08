@@ -1,6 +1,12 @@
 
 ### ![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge)
-<!-- <h2 style="visibility: hidden; height: 0; margin: 0; padding: 0;">Preface</h2> -->
+
+<details>
+<summary><b>My section header in bold</b></summary>
+
+Any folded content here. It requires an empty line just above it.
+
+</details>
 
 **Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Posters and backgrounds, fixed titles, labels and ratings, all of my watched history and media resume positions, and date-added sorting would all have been erased. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
 
