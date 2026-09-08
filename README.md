@@ -1,11 +1,10 @@
 
-### ![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge) 
-<details>
-<summary></summary>
+<h2> 
+  
+![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge) 
 
-<h2>Preface</h2>
+</h2>
 
-</details>
 
 **Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Posters and backgrounds, fixed titles, labels and ratings, all of my watched history and media resume positions, and date-added sorting would all have been erased. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
 
@@ -90,6 +89,7 @@ Use only the official project page for donation or support links.
 <br>
 
 ### ![](https://img.shields.io/badge/-Where%20App%20Data%20is%20Saved-ACACDD?style=for-the-badge)
+
 
 Pb&J Relay saves its working data in a user-selected data folder (for Jellyfin users). By default, this is inside the user's Documents folder.
 That folder can contain harvested Plex archives, harvested Jellyfin archives, match previews, migration plans, reports, cached credentials, exported lists, and UI settings.
