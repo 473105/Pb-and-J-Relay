@@ -1,10 +1,9 @@
 
-### ![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge)
-
+### ![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge) 
 <details>
-<summary><b>My section header in bold</b></summary>
+<summary></summary>
 
-Any folded content here. It requires an empty line just above it.
+<h2>Preface</h2>
 
 </details>
 
@@ -381,10 +380,15 @@ Two quality of life features are built into the app - **"Guide me"** and **"Note
 
 ##
 <br>
-Time is valuable, and I hope this project helps you reclaim some of yours.
+<div align="center">
+<details>
+<summary><b>I hope you enjoy the app.</b></summary>
+
 <br>
 <br>
 <br>
   <div align="center">
   <img width="80" height="80" alt="dancing-banana-transparent-trymstene com" src="https://github.com/user-attachments/assets/12692b9b-bc91-4285-8907-41c3f9135884" />
   </div>
+</details>
+</div>
