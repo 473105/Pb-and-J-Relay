@@ -234,7 +234,7 @@ Pb&J Relay understands different library layout staging:
 
 ### ![](https://img.shields.io/badge/-Artwork%20Storage-83FF85?style=for-the-badge)
 
-Archived artwork can take a large amount of disk space, but you do have an option to choose image size cap from 100 KB to 2 MB, or leave the option unchecked for the artwork to be copied without emposing a limit (resizing will increase migration time).
+Archived artwork can take a large amount of disk space, but you do have an option to choose image size cap from 100 KB to 2 MB, or leave the option unchecked for the artwork to be copied without imposing a limit (resizing will increase migration time).
 The size cap only affects larger than the cap images. Smaller images are not enlarged to match the size cap.
 When artwork is applied to Jellyfin, Jellyfin stores its own copy in its server data/cache. Deleting the Pb&J Relay archive later would not remove artwork that Jellyfin server has already accepted into its own storage.
 
@@ -338,7 +338,7 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
   example templates:
   ```
   OS: Windows 11 Pro, 24H2
-  Duration (only the migration process): Advanced, 2 hours 15 minutes
+  Duration (only the migration process): Advanced mode, 2 hours 15 minutes
   Movies: 500
   TV: 50 shows, 150 seasons, 2,000 episodes
   Music: 250 albums, 3,500 tracks
@@ -347,7 +347,7 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
   ```
   ```
   OS: Windows 10 LTSC, 21H2
-  Duration (only the migration process): Simple, 1 hour 30 minutes
+  Duration (only the migration process): Simple mode, 1 hour 30 minutes
   Movies: 500
   TV: 50 shows, 150 seasons, 2,000 episodes
   Music: 250 albums, 3,500 tracks
@@ -361,9 +361,9 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
   ### ![](https://img.shields.io/badge/-A%20Helpful%20Note-EDFF99?style=for-the-badge)
 Two quality of life features are built into the app - **"Guide me"** and **"Notes & tips"**:
 <br>
-**"Guide me"** is a very user friendly walkthrough feature that eliminates the guesswork for anyone unfamiliar with the app. Enabling it brings up numbered steps overlay with explanation text when hovered over with a mouse. It will guide you through the full Plex-to-Jellyfin migration process within Simple and Advanced modes. 
+**"Guide me"** is a user-friendly walkthrough of the migration process. When enabled, it displays numbered steps with hover explanations for the Simple and Advanced workflows. 
 <br>
-**"Notes & tips"** is an included tooltip using the same hover-over method to deliver helpful explanations of buttons and selections.
+**"Notes & tips"** provides hover explanations for buttons and settings.
 
 <br>
 <div align="center">
