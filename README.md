@@ -1,21 +1,21 @@
 
-### ![](https://img.shields.io/badge/-Preface-09E3B9?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Preface-84D0FC?style=for-the-badge)
 
 **Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Posters and backgrounds, fixed titles, labels and ratings, all of my watched history and media resume positions, and date-added sorting would all have been erased. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
 
 This tool is built to preserve that work. It reads Plex and Jellyfin installations, compares the two, shows what matches, lets the user review problem cases, and then applies the selected Plex metadata to Jellyfin. It also allows the user to start with an absolutely bare Jellyfin server and populates it by fully cloning your Plex data onto it.
 
-</br>
+<br>
 
 ##
-### ![](https://img.shields.io/badge/-Main%20App-D74B00?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Main%20App-FFA270?style=for-the-badge)
 
 
 <div align="center">
   <img width="337" height="98" alt="PBandJRelay_full_logo" src="https://github.com/user-attachments/assets/c2fd8b58-5b88-48a0-ad77-754c90fb3d5b" />
 </div>
 
-This project is a **Windows** migration tool for moving curated **Plex** library metadata into **Jellyfin**. Pb&j Realy preserves the work that you have put into customizing your Plex media and transfers it all to your Jellyfin servere. The app eliminates the uncertainty of whether migrating is worth your time in rebuilding libraries on Jellyfin - meanwhile your libraries continue to grow and anchors your Plex dependency even further. Migrating to a new service usually meant that your edited titles, posters, and backgrounds would all be reset to their default images; watched history and states all erased; personal ratings, tags, and labels are gone too; and if you used to sort your libraries by 'Added Date' you only had two options before: either manually adjust each item, or be content with another way of sorting your media. You don't need another layer of anxiety for a hobby that should be enjoyable, so let Pb&J Relay remove this dread by doing all of the heavy lifting of transfering all of this data for you, so you can just kick back and only focus on watching your favorite movies, and enjoying your music backups.
+This project is a **Windows** migration tool for moving curated **Plex** library metadata into **Jellyfin**. Pb&J Relay preserves the work that you have put into customizing your Plex media and transfers it all to your Jellyfin server. The app eliminates the uncertainty of whether migrating is worth your time in rebuilding libraries on Jellyfin - meanwhile your libraries continue to grow and anchors your Plex dependency even further. Migrating to a new service usually meant that your edited titles, posters, and backgrounds would all be reset to their default images; watched history and states all erased; personal ratings, tags, and labels are gone too; and if you used to sort your libraries by 'Added Date' you only had two options before: either manually adjust each item, or be content with another way of sorting your media. You don't need another layer of anxiety for a hobby that should be enjoyable, so let Pb&J Relay remove this dread by doing all of the heavy lifting of transferring all of this data for you, so you can just kick back and only focus on watching your favorite movies, and enjoying your music backups.
 
 <div align="center">
 <img width="782" height="409" alt="PbandJ_ui_example" src="https://github.com/user-attachments/assets/9e79acbe-74ba-4a9b-b705-70c657644167" />
@@ -29,9 +29,9 @@ This project is a **Windows** migration tool for moving curated **Plex** library
 
 ##
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Download%20and%20Launch-009528?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Download%20and%20Launch-8FD0A0?style=for-the-badge)
 
 
 The standalone package does not require Python to be installed on the target machine:
@@ -52,7 +52,7 @@ A small companion app, Jelly Toast, is included in the standalone package:
 
 For convenience, Pb&J Relay can launch Jelly Toast from within the main window and you can also launch the main app from the companion app as well (that option will be hidden if either app is moved from its extracted folder).
 
-</br>
+<br>
 
 ## 
 ### Upcoming Features
@@ -62,10 +62,10 @@ The next upgrade to that feature would be another lightweight companion app for 
 
 Please consider supporting the project with a donation to help with the release of these features.
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/Donations-D9C441?style=for-the-badge)
+### ![](https://img.shields.io/badge/Donations-EDFF99?style=for-the-badge)
 
 
 <div align="center">
@@ -81,9 +81,9 @@ Use only the official project page for donation or support links.
 ##
 
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Where%20App%20Data%20is%20Saved-6969B5?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Where%20App%20Data%20is%20Saved-ACACDD?style=for-the-badge)
 
 Pb&J Relay saves its working data in a user-selected data folder (for Jellyfin users). By default, this is inside the user's Documents folder.
 That folder can contain harvested Plex archives, harvested Jellyfin archives, match previews, migration plans, reports, cached credentials, exported lists, and UI settings.
@@ -91,7 +91,7 @@ That folder can contain harvested Plex archives, harvested Jellyfin archives, ma
 ****Depending on library size and selected options, this data can take many gigabytes of storage.** Artwork is usually the largest part. If you harvest large libraries with posters, backdrops, and logos enabled, make sure the selected data folder is on a drive with enough free space.
 
 
-### ![](https://img.shields.io/badge/-What%20The%20App%20Transfers-D94153?style=for-the-badge)
+### ![](https://img.shields.io/badge/-What%20The%20App%20Transfers-E29EA6?style=for-the-badge)
 Pb&J Relay can transfer these Plex values to matched Jellyfin items:
 
 - Titles, original titles, and sort titles.
@@ -106,12 +106,12 @@ Pb&J Relay can transfer these Plex values to matched Jellyfin items:
 Not every Plex field has a perfect Jellyfin equivalent. The migration plan shows what will be applied and what may be skipped or partially applied.
 
 
-### ![](https://img.shields.io/badge/-Safety%20Protocol-509A42?style=for-the-badge)
-Pb&J Relay is designed around reviewable steps:
+### ![](https://img.shields.io/badge/-Safety%20Protocol-BED698?style=for-the-badge)
+This app is designed around reviewable steps:
 
 - Plex data is harvested into a Plex archive first.
 - Jellyfin data is harvested into a Jellyfin archive separately.
-- The app compares those archives before any Jellyfin write happens.
+- The app compares those archives before applying migrated metadata.
 - Migration plans are saved before applying changes.
 - Applying a plan writes only to Jellyfin through the Jellyfin API.
 
@@ -119,10 +119,10 @@ The app should not modify, move, rename, delete, or rewrite the physical media f
 
 Jellyfin itself can write `.nfo`, artwork, subtitle, or metadata files to media folders if those Jellyfin features are enabled. Pb&J Relay tries to prevent those behaviors during migration workflows because they can clutter folders and change folder modified times.
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/Simple/Advanced%20Modes-CD0B0B?style=for-the-badge)
+### ![](https://img.shields.io/badge/Simple/Advanced%20Modes-C8CDE5?style=for-the-badge)
 
 ### Simple Mode
 Simple mode is for the automated workflow.
@@ -165,10 +165,10 @@ Use this mode when you want to:
 
 Advanced mode is the better choice when the library has unusual folder structures, duplicate titles, split libraries across multiple drives, or old Plex phantom records from missing drives.
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/-Typical%20Workflow-1C714A?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Typical%20Workflow-A1CCC5?style=for-the-badge)
 
 1. Start Plex and Jellyfin media servers.
 2. Load Plex libraries.
@@ -187,12 +187,12 @@ Advanced mode is the better choice when the library has unusual folder structure
 
 **The `Guide me` overlay, Simple/Advanced mode switch, and `Notes & Tips` switch are there to help users follow the workflow without having to memorize every step.**
 
-</br>
+<br>
 
 ## 
 ### ![](https://img.shields.io/badge/-App%20Specific%20Terminology-D4CC08?style=for-the-badge)
 
-- `Harvest`: collects curated data from your server and stores it locally. This word was chosen because gathering data that has grown from the time you put into it, is not just a backup/archive/pull/transfer; It is the act of collecting the fruits of your work before moving to a new location, so the personal value you built in Plex does not have to be abandoned or manually recreated in a new format. 
+- `Harvest`: collects curated data from your server and stores it locally. I felt like this word is a good fit here because gathering data that has grown from your valuable time is not just a backup/archive/pull/transfer, but is more analogous to collecting the fruits of your labor.
 - `Archive`: the saved result of a harvest. An archive is a structured local copy of metadata and optional artwork that the app can compare and reuse later.
 - `Plex archive`: harvested Plex metadata and artwork. This is the source side of the migration.
 - `Jellyfin archive`: harvested Jellyfin metadata. This is the destination side of the migration.
@@ -201,11 +201,11 @@ Advanced mode is the better choice when the library has unusual folder structure
 - `Physical items`: file or folder is present on disk at the path recorded by the archive.
 - `Phantom`: the archive contains metadata for an item whose file or folder is not currently present on disk.
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Phantom%20Items-837197?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Phantom%20Items-C4A3ED?style=for-the-badge)
 
-Phantom items are important for recovery because Plex can keep metadata for a file that no longer exists on disk, especially if a drive failed or a library was not rescanned after files disappeared. it is importand not to have Plex automatically scan this library because it will think that it was a deliberate deletion of those items and will remove them from your library completely
+Phantom items are important for recovery because Plex can keep metadata for a file that no longer exists on disk, especially if a drive failed or a library was not rescanned after files disappeared. it is important not to have Plex automatically scan this library because it will think that it was a deliberate deletion of those items and will remove them from your library completely
 Pb&J Relay can harvest that Plex metadata, but Jellyfin still needs an item record before the Jellyfin API can update it. 
 That means:
 - Plex phantom metadata can be applied to a Jellyfin item if Jellyfin already has a matching item ID.
@@ -219,9 +219,9 @@ Avoid manually using Empty Trash on those libraries.
 Harvest the Plex archive first, because that captures the remaining metadata while Plex still has it.
 ##
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Libraries%20and%20Drives-778ED9?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Libraries%20and%20Drives-9BB1FB?style=for-the-badge)
 
 Pb&J Relay understands different library layout staging:
 
@@ -230,19 +230,15 @@ Pb&J Relay understands different library layout staging:
 - Some libraries may be fully present while others are partially missing.
 - Old Plex records may point to drives that no longer exist.
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Artwork%20Storage-60D962?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Artwork%20Storage-83FF85?style=for-the-badge)
 
-Harvested artwork can take a large amount of disk space. Pb&J Relay can limit downloaded Plex artwork size during harvest to:
-```text
-100 KB, 200 KB, 500 KB, 800 KB, 1 MB, 1.5 MB, 2 MB
-```
+Archived artwork can take a large amount of disk space, but you do have an option to choose image size cap from 100 KB to 2 MB, or leave the option unchecked for the artwork to be copied without emposing a limit (resizing will increase migration time).
 The size cap only affects larger than the cap images. Smaller images are not enlarged to match the size cap.
+When artwork is applied to Jellyfin, Jellyfin stores its own copy in its server data/cache. Deleting the Pb&J Relay archive later would not remove artwork that Jellyfin server has already accepted into its own storage.
 
-When artwork is applied to Jellyfin, Jellyfin stores its own copy in its server data/cache. Deleting the Pb&J Relay archive later would not remove artwork that Jellyfin has already accepted into its own storage.
-
-</br>
+<br>
 
 ### ![](https://img.shields.io/badge/-Data%20Folder-E7D727?style=for-the-badge)
 
@@ -261,13 +257,13 @@ Jellyfin\Servers\<server-id>\MigrationPlans
 Config
 ```
 
-The data folder can be changed from the app. Keeping one shared data folder is usually safest because archives, previews, selections, plans, reports, cached credentials, and UI settings stay synchronized.
+The data folder can be changed from the app, but keeping one shared data folder is usually safest because archives, previews, selections, plans, reports, cached credentials, and UI settings stay synchronized.
 
-</br>
+<br>
 
-### ![](https://img.shields.io/badge/-Remote%20Access%20Setup-949494?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Remote%20Access%20Setup-B4B4B4?style=for-the-badge)
 
-The Remote  Setup tab helps configure private Jellyfin access through Tailscale.
+The Remote Setup tab helps configure private Jellyfin access through Tailscale.
 
 Important notes:
 - Pb&J Relay must be running on the Jellyfin server machine for setup changes to apply correctly.
@@ -275,16 +271,14 @@ Important notes:
 - Tailscale Serve is optional and is only needed for the shorter HTTPS MagicDNS-style URL without a port.
 - Creating a Windows Firewall rule requires administrator approval.
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/-Companion%20App-4869D9?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Companion%20App-A2B4FF?style=for-the-badge)
 
 <div align="center">
   <img width="337" height="98" alt="JellyToast_full_logo" src="https://github.com/user-attachments/assets/aab7f37d-69ea-4f0f-a11b-d25ce076307c" />
 </div>
-
-
 
 Jelly Toast: Jellyfin Test Server is a small companion utility for creating and running isolated Jellyfin test servers.
 Use it when you want to test or troubleshoot your library creation, app scanning, and migration behavior without touching your real Jellyfin server.
@@ -294,26 +288,26 @@ After choosing a separate directory where the test server data will be created, 
 <img width="457" height="331" alt="JellyToast_ui_example" src="https://github.com/user-attachments/assets/e666f83e-59f9-4c3f-bdd8-595155939bd0" />
 </div>
 
-</br>
+<br>
 
 Test servers are intended to run on a different HTTP port (for example `8097`, while the real Jellyfin server can keep using the default port of `8096`).
 This companion app will not erase or modify the actual Jellyfin server, and will refuse ports that are in use.
 
 ##
 
-</br>
+<br>
   
-### ![](https://img.shields.io/badge/Requirements-926464?style=for-the-badge)
+### ![](https://img.shields.io/badge/Requirements-CAB2B2?style=for-the-badge)
 - Windows 10 or 11 (I haven't tested on other Windows versions yet)
 - Plex and Jellyfin Media Server reachable from the machine running this migration app.
 - Jellyfin API key and Plex tokens.
 - Tailscale app only if using the **Remote Access Setup** tab.
 - Administrator approval (required by one optional selection `Remote Access Setup tab > Isolated Options > Allow Port in Windows Firewall` to setup Tailscale access through the user specified port).
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/-Reporting%20Bugs-453A3A?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Reporting%20Bugs-D1D1D1?style=for-the-badge)
 
 When reporting a problem, include:
 
@@ -328,20 +322,23 @@ When reporting a problem, include:
 
 IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and account details before posting logs publicly.
 
-</br>
+<br>
 
 ## 
-### ![](https://img.shields.io/badge/-Known%20Limitations-3EB8C3?style=for-the-badge)
+### ![](https://img.shields.io/badge/-Known%20Limitations-70F1FD?style=for-the-badge)
 - Jellyfin must have an item record before the API can apply metadata to that item.
 - Some Plex metadata fields do not have exact Jellyfin equivalents.
 - Jellyfin can still identify or rename media according to its own rules unless metadata locking/prevention options are enabled (the app enables this by default before writing migration).
 - Remote access setup depends on Tailscale account/device status, Jellyfin networking settings, firewall rules, and client device restrictions.
 - Very large artwork archives and large migration plans can take significant time to process.
-  If you would like to contribute to narrowing down these time frames please share your **Windows version, library size, if selected options under the 'Migrate Metadata' tab included 'watched/resume state', if the artwork has been archived from Plex and what size it was limited to**. 
+  If you would like to contribute to narrowing down these time frames please share some info:
+  **Windows version.
+  Duration of migration in Simple mode or in Advanced mode (if advanced mode, include only the duration after you clicked on 'Apply Current Plan to Jellyfin' button). 
+  library size, if selected options under the 'Migrate Metadata' tab included 'watched/resume state', if the artwork has been archived from Plex and what size it was limited to**. 
   example templates:
   ```
-  OS: Windows 11 pro, 24H2
-  Duration (library scans and migration): 2 hours 15 minutes
+  OS: Windows 11 Pro, 24H2
+  Duration (only the migration process): Advanced, 2 hours 15 minutes
   Movies: 500
   TV: 50 shows, 150 seasons, 2,000 episodes
   Music: 250 albums, 3,500 tracks
@@ -350,7 +347,7 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
   ```
   ```
   OS: Windows 10 LTSC, 21H2
-  Duration (library scans and migration): 1 hours 30 minutes
+  Duration (only the migration process): Simple, 1 hour 30 minutes
   Movies: 500
   TV: 50 shows, 150 seasons, 2,000 episodes
   Music: 250 albums, 3,500 tracks
@@ -358,3 +355,29 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
   Watched/resume state: not included
   ```
   Once there is a meaningful amount of data I will upload a chart and a calculator for estimating how long your library migration would likely take.
+
+##
+
+  ### ![](https://img.shields.io/badge/-A%20Helpful%20Note-EDFF99?style=for-the-badge)
+Two quality of life features are built into the app - **"Guide me"** and **"Notes & tips"**:
+<br>
+**"Guide me"** is a very user friendly walkthrough feature that eliminates the guesswork for anyone unfamiliar with the app. Enabling it brings up numbered steps overlay with explanation text when hovered over with a mouse. It will guide you through the full Plex-to-Jellyfin migration process within Simple and Advanced modes. 
+<br>
+**"Notes & tips"** is an included tooltip using the same hover-over method to deliver helpful explanations of buttons and selections.
+
+<br>
+<div align="center">
+<img width="757" height="197" alt="guideme_arrow" src="https://github.com/user-attachments/assets/d7a673bb-b575-473f-a02a-8107c4ec5b75" />
+</div>
+
+
+
+##
+<br>
+Time is valuable, and I hope this project helps you reclaim some of yours.
+<br>
+<br>
+<br>
+  <div align="center">
+  <img width="80" height="80" alt="dancing-banana-transparent-trymstene com" src="https://github.com/user-attachments/assets/12692b9b-bc91-4285-8907-41c3f9135884" />
+  </div>
