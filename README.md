@@ -1,8 +1,8 @@
 ### ![](https://img.shields.io/badge/-Why%20tho-84D0FC?style=for-the-badge) 
 
-**Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Posters and backgrounds, fixed titles, labels and ratings, all of my watched history and media resume positions, and date-added sorting would all have been erased. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
+**Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
 
-This tool is built to preserve that work. It reads Plex and Jellyfin installations, compares the two, shows what matches, lets the user review problem cases, and then applies the selected Plex metadata to Jellyfin. It also allows the user to start with an absolutely bare Jellyfin server and populates it by fully cloning your Plex data onto it.
+This tool is built to preserve that work. It reads Plex and Jellyfin installations, compares the two, lets the user review and revise differences in matches, and then applies the selected Plex metadata to Jellyfin. It also allows the user to start with an absolutely bare Jellyfin server and populates it by fully cloning your Plex metadata and artwork onto it.
 
 <br>
 
@@ -14,7 +14,10 @@ This tool is built to preserve that work. It reads Plex and Jellyfin installatio
   <img width="337" height="98" alt="PBandJRelay_full_logo" src="https://github.com/user-attachments/assets/c2fd8b58-5b88-48a0-ad77-754c90fb3d5b" />
 </div>
 
-This project is a **Windows** migration tool for moving curated **Plex** library metadata into **Jellyfin**. Pb&J Relay preserves the work that you have put into customizing your Plex media and transfers it all to your Jellyfin server. The app eliminates the uncertainty of whether migrating is worth your time in rebuilding libraries on Jellyfin - meanwhile your libraries continue to grow and anchors your Plex dependency even further. Migrating to a new service usually meant that your edited titles, posters, and backgrounds would all be reset to their default images; watched history and states all erased; personal ratings, tags, and labels are gone too; and if you used to sort your libraries by 'Added Date' you only had two options before: either manually adjust each item, or be content with another way of sorting your media. You don't need another layer of anxiety for a hobby that should be enjoyable, so let Pb&J Relay remove this dread by doing all of the heavy lifting of transferring all of this data for you, so you can just kick back and only focus on watching your favorite movies, and enjoying your music backups.
+This project is a **Windows** migration tool for moving curated **Plex** library metadata into **Jellyfin**. Pb&J Relay preserves the work you have put into customizing your Plex media and carries it over to your Jellyfin server.
+The uncertainty of whether a migration is worth the time and effort of rebuilding everything in Jellyfin can make it easy to put off the decision to switch. Meanwhile, your libraries continue to grow, anchoring you to Plex even further. 
+Migrating to a new service usually meant that your edited titles, posters, and backgrounds would be reset to their defaults; watched history and resume states would be erased; personal ratings, tags, and labels would disappear; and if you relied on Added Date to sort your libraries, your choices were either to manually correct each item or accept a completely different order of sorting your media.
+You don't need another layer of anxiety around a hobby that should be enjoyable. Let Pb&J Relay handle the heavy lifting of transferring that data for you, so you can kick back and focus on watching your favorite movies, shows, and enjoying your music backups.
 
 <div align="center">
 <img width="707" height="426" alt="example2" src="https://github.com/user-attachments/assets/7632f462-7b98-4d5b-b5bd-588dcfad00db" />
@@ -280,7 +283,7 @@ Important notes:
   <img width="337" height="98" alt="JellyToast_full_logo" src="https://github.com/user-attachments/assets/aab7f37d-69ea-4f0f-a11b-d25ce076307c" />
 </div>
 
-Jelly Toast: Jellyfin Test Server is a small companion utility for creating and running isolated Jellyfin test servers.
+**Jelly Toast: Jellyfin Test Server** is a small companion utility for creating and running isolated Jellyfin test servers.
 Use it when you want to test or troubleshoot your library creation, app scanning, and migration behavior without touching your real Jellyfin server.
 After choosing a separate directory where the test server data will be created, it will write config, cache, and log files to disk.
 
