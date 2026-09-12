@@ -18,7 +18,10 @@ This project is a **Windows** migration tool for moving curated **Plex** library
 The uncertainty of whether a migration is worth the time and effort of rebuilding everything in Jellyfin can make it easy to put off the decision to switch. Meanwhile, your libraries continue to grow, anchoring you to Plex even further. 
 Migrating to a new service usually meant that your edited titles, posters, and backgrounds would be reset to their defaults; watched history and resume states would be erased; personal ratings, tags, and labels would disappear; and if you relied on Added Date to sort your libraries, your choices were either to manually correct each item or accept a completely different order of sorting your media.
 You don't need another layer of anxiety around a hobby that should be enjoyable. Let Pb&J Relay handle the heavy lifting of transferring that data for you, so you can kick back and focus on watching your favorite movies, shows, and enjoying your music backups.
-
+<div align="center"> 
+**Tested on Plex 1.41.3.9 and Jellyfin 10.10.7 Media Servers.
+</div>
+<br>
 <div align="center">
 <img width="707" height="426" alt="example2" src="https://github.com/user-attachments/assets/7632f462-7b98-4d5b-b5bd-588dcfad00db" />
 </div>
