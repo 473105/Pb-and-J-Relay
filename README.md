@@ -63,14 +63,15 @@ For convenience, Pb&J Relay can launch Jelly Toast from within the main window a
 
 ## 
 ### Upcoming Features
-~~At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.~~ <div align="right">
+- ~~At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.~~ <div align="right">
 Local user history transfer is now implemented! See section 'User History Transfer' below.
 </div>
-Ratings are now also scraped and ready to be used by Jellyfin's 1-10 rating system hidden in its API but never implemented for some reason. However, there are a few excellent Jellyfin extensions built to manipulate this system, which means we could inject saved plex user ratings into Jellyfin user accounts, and those extensions should pick up that data - this will be tested and implemented in a future update.
 
-The next upgrade to that feature would be another lightweight companion app for remote Plex users, which would let them collect their own watch history so this data can be transferred into their Jellyfin account history.
+- Ratings are now also scraped and ready to be used by Jellyfin's 1-10 rating system hidden in its API (but never implemented for some reason). There are a few excellent Jellyfin extensions built to manipulate this system already, which means we could inject saved plex user ratings into Jellyfin user accounts, and those extensions should pick up that data - this will be tested and implemented in a future update.
 
-Support for Jellyfin v12+. This would likely be a pretty big overhaul of my app due to v12 introducing significant architectural changes.
+- The next upgrade to that feature would be another lightweight companion app for remote Plex users, which would let them collect their own watch history so this data can be transferred into their Jellyfin account history.
+
+- Support for Jellyfin v12+. This would likely be a pretty big overhaul of my app due to v12 introducing significant architectural changes.
 
 Please consider supporting the project with a donation to help with the release of these features and future updates.
 
