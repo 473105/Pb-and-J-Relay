@@ -19,11 +19,13 @@ The uncertainty of whether a migration is worth the time and effort of rebuildin
 Migrating to a new service usually meant that your edited titles, posters, and backgrounds would be reset to their defaults; watched history and resume states would be erased; personal ratings, tags, and labels would disappear; and if you relied on Added Date to sort your libraries, your choices were either to manually correct each item or accept a completely different order of sorting your media.
 You don't need another layer of anxiety around a hobby that should be enjoyable. Let Pb&J Relay handle the heavy lifting of transferring that data for you, so you can kick back and focus on watching your favorite movies, shows, and enjoying your music backups.
 <div align="center"> 
-**Tested on Plex 1.41.3.9 and Jellyfin 10.10.7 Media Servers.
+Tested on: 
+  <br> Plex Media Server 1.41.3.9 - 1.43.4.1 
+  <br> Jellyfin Media Server 10.10.7 - 10.11.11
 </div>
 <br>
 <div align="center">
-<img width="707" height="426" alt="example2" src="https://github.com/user-attachments/assets/7632f462-7b98-4d5b-b5bd-588dcfad00db" />
+<img width="707" height="426" alt="example3" src="https://github.com/user-attachments/assets/79482975-7961-4990-8112-98c4646eb876" />
 </div>
 
 ## 
@@ -61,11 +63,14 @@ For convenience, Pb&J Relay can launch Jelly Toast from within the main window a
 
 ## 
 ### Upcoming Features
-At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.
+~~At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.~~ 
+<br> **Local user history transfer is now implemented, see **User History Transfer** below.**. Ratings are also scraped and ready to be used by Jellyfin API's 1-10 rating system which they never bothered to implement for some reason. However, there are a few Jellyfin extensions that already expose this system, which means we can inject saved plex user ratings into those addons. This will be implemented in a future update.
 
-The next upgrade to that feature would be another lightweight companion app for remote Plex users, which would let them collect their own watch-state metadata so this data can be transferred into their own Jellyfin account history.
+The next upgrade to that feature would be another lightweight companion app for remote Plex users, which would let them collect their own watch history so this data can be transferred into their Jellyfin account history.
 
-Please consider supporting the project with a donation to help with the release of these features.
+Support for Jellyfin v12+. This would likely be a pretty big overhaul of my app due to v12 introducing significant architectural changes.
+
+Please consider supporting the project with a donation to help with the release of these features and future updates.
 
 <br>
 
@@ -76,9 +81,9 @@ Please consider supporting the project with a donation to help with the release 
 <div align="center">
 <h2 align="center">Support the Project</h2>
 
-If this tool saves you time, consider supporting ongoing development through the official GitHub page.
+If this tool saves you time, consider supporting ongoing development through PayPal.
 
-Use only the official project page for donation or support links.
+Please only use donation links on this official PB&J Relay GitHub project page.
 
 [![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=MEUXL5RKQQ84U)
 </div>
@@ -106,10 +111,37 @@ Pb&J Relay can transfer these Plex values to matched Jellyfin items:
 - Posters, backdrops, and logo artwork.
 - Genres, tags, labels, and collections when available.
 - People, roles, studios, countries, directors, writers, and related credits where Jellyfin accepts them.
-- Ratings and personal ratings where supported.
-- Watched state, play count, last viewed time, and resume position for the selected Jellyfin user.
+- Ratings, plus personal ratings through User History Transfer where supported.
+- Watched state, play count, last viewed time, and resume position for paired Jellyfin users through User History Transfer.
 
 Not every Plex field has a perfect Jellyfin equivalent. The migration plan shows what will be applied and what may be skipped or partially applied.
+
+### ![](https://img.shields.io/badge/-User%20History%20Transfer-FFFFFF?style=for-the-badge)
+
+Pair local Plex user accounts with existing Jellyfin users to transfer their personal watch history. This includes watched state, play count, last viewed time, watch progress, and personal ratings where supported.
+
+**Metadata and artwork migration does not automatically include user history.** Selecting accounts in the Plex and Jellyfin tabs does not bypass the need to pair them in **User History Transfer**, even when transferring history from the account used to load Plex libraries.
+
+1. In the 'User History Transfer' tab enter an individual Plex account's server token and assign a local nickname for easy distinction, then click **Add User**. The app fetches that account's available history records.
+2. Select the receiving Jellyfin user beside the added Plex user. **Refresh Jellyfin Users** updates the available user list from the previously configured server in the 'Jellyfin' tab.
+3. Check the desired pairs and click **Add Selected Pair to Queue**. Repeat for additional users.
+4. Choose how to handle existing Jellyfin history, with the following options:
+   ```text
+   **Preserve existing Jellyfin user's history:** leave an item's existing Jellyfin watch
+   history intact and apply Plex history to items without it. Personal ratings are handled
+   separately: existing ratings are kept and missing ratings can be filled.
+   ```
+   ```text
+   **Overwrite with Plex user's history:** replace corresponding Jellyfin history with available
+   values from the paired Plex user. Missing Plex values do not erase existing Jellyfin data.
+   ```
+  5. (a) **Add Queue List to Migration Plan** includes the queued pairs at the end of the metadata migration. Queuing pairs alone does not attach them. If you change the pairings or policy, add the queue to the plan again; attachments must also be added again after restarting the app.
+
+  5. (b) **Standalone User History Transfer** transfers user history without repeating the metadata and artwork migration. This can be used after migration, including for additional users. Review the proposed records and exclusions, then confirm **Apply Watch State and Personal Ratings** to write the changes.
+
+When history records are copied from Plex items, Jellyfin needs to have the same items to match the data to - which will not be a problem if servers are undergoing migration on the same machine and library files haven't been removed. The 'standalone transfer' selection will bring up a review window before applying watch history. Items without an eligible match are automatically excluded from the transfer.
+
+This feature transfers data between existing accounts; it does not create new Jellyfin accounts, or copy passwords and permissions.
 
 
 ### ![](https://img.shields.io/badge/-Safety%20Protocol-BED698?style=for-the-badge)
@@ -133,7 +165,7 @@ Jellyfin itself can write `.nfo`, artwork, subtitle, or metadata files to media 
 ### Simple Mode
 Simple mode is for the automated workflow.
 
-The main action is in the Jellyfin tab:
+The main action is in the User History Transfer tab:
 
 ```text
 Automated Full Migration
@@ -155,6 +187,7 @@ The automated workflow goes through the following steps:
 - Preparing the migration plan.
 - Applying data to Jellyfin.
 - Final Jellyfin rescan.
+- User history transfer, if a queued pairs list was explicitly added to the migration plan.
 
 ### Advanced Mode
 Advanced mode is for manual control. 
@@ -162,10 +195,11 @@ Use this mode when you want to:
 
 - Harvest selected Plex libraries.
 - Harvest selected Jellyfin libraries.
+- Pair Jellyfin local users to Plex local users to transfer their watch history.
 - Compare archives manually.
 - Resolve conflicts one by one.
 - Exclude specific match groups.
-- Build a migration plan only from selected rows.
+- Build a migration plan from selected rows.
 - Apply metadata to a small test set before a larger migration.
 - Re-run only targeted comparisons or migrations.
 
@@ -181,12 +215,12 @@ Advanced mode is the better choice when the library has unusual folder structure
 3. Harvest the Plex libraries you want to preserve.
 4. Move to Jellyfin.
 5. Enter the Jellyfin URL and API key.
-6. Select the Jellyfin user whose watched/resume state should be updated.
+6. Select the Jellyfin user whose libraries should be displayed.
 7. Load Jellyfin libraries.
 8. Harvest Jellyfin archive data.
 9. Compare Plex and Jellyfin archives.
 10. Resolve conflicts and review likely or similar matches.
-11. Prepare a migration plan.
+11. Prepare a migration plan. To include user history, pair and queue users in **User History Transfer**, then click **Add Queue List to Migration Plan**.
 12. Apply the current plan to Jellyfin.
 13. Let Jellyfin perform the final scan.
 14. Review Jellyfin in the browser or app.
@@ -337,29 +371,7 @@ IMPORTANT: Don't forget to remove private Plex tokens, Jellyfin API keys, and ac
 - Jellyfin can still identify or rename media according to its own rules unless metadata locking/prevention options are enabled (the app enables this by default before writing migration).
 - Remote access setup depends on Tailscale account/device status, Jellyfin networking settings, firewall rules, and client device restrictions.
 - Very large artwork archives and large migration plans can take significant time to process.
-  If you would like to contribute to narrowing down these time frames please share some info:
-  **Windows version.
-  Duration of migration in Simple mode or in Advanced mode (if advanced mode, include only the duration after you clicked on 'Apply Current Plan to Jellyfin' button). 
-  library size, if selected options under the 'Migrate Metadata' tab included 'watched/resume state', if the artwork has been archived from Plex and what size it was limited to**. 
-  example templates:
-  ```
-  OS: Windows 11 Pro, 24H2
-  Duration (only the migration process): Advanced mode, 2 hours 15 minutes
-  Movies: 500
-  TV: 50 shows, 150 seasons, 2,000 episodes
-  Music: 250 albums, 3,500 tracks
-  Artwork: Included, limited to 500 KB per image
-  Watched/resume state: Included
-  ```
-  ```
-  OS: Windows 10 LTSC, 21H2
-  Duration (only the migration process): Simple mode, 1 hour 30 minutes
-  Movies: 500
-  TV: 50 shows, 150 seasons, 2,000 episodes
-  Music: 250 albums, 3,500 tracks
-  Artwork: Included, no limit
-  Watched/resume state: not included
-  ```
+  If you would like to contribute to narrowing down these time frames please share the timings of your migration (bottom right of the app window, View History > Migration Timings). Please only share the data after a fully completed migration process.
   Once there is a meaningful amount of data I will upload a chart and a calculator for estimating how long your library migration would likely take.
 
 ##
@@ -370,10 +382,13 @@ Two quality of life features are built into the app - **"Guide me"** and **"Note
 **"Guide me"** is a user-friendly walkthrough of the migration process. When enabled, it displays numbered steps with hover explanations for the Simple and Advanced workflows. 
 <br>
 **"Notes & tips"** provides hover explanations for buttons and settings.
-
+<br>
+##
+Disclaimer: This project was created with the help of Codex in Visual Studio Code.
+##
 <br>
 <div align="center">
-<img width="757" height="197" alt="guideme_arrow" src="https://github.com/user-attachments/assets/d7a673bb-b575-473f-a02a-8107c4ec5b75" />
+<img width="757" height="197" alt="guideme_arrow2" src="https://github.com/user-attachments/assets/b6ca9464-735c-4969-b90a-db0119519dcc" />
 </div>
 
 
@@ -382,7 +397,7 @@ Two quality of life features are built into the app - **"Guide me"** and **"Note
 <br>
 <div align="center">
 <details>
-<summary><b>I hope you enjoy the app.</b></summary>
+<summary><b>I hope you enjoy this project.</b></summary>
 
 <br>
 <br>
