@@ -119,6 +119,7 @@ Pb&J Relay can transfer these Plex values to matched Jellyfin items:
 
 Not every Plex field has a perfect Jellyfin equivalent. The migration plan shows what will be applied and what may be skipped or partially applied.
 
+
 ### ![](https://img.shields.io/badge/-User%20History%20Transfer-EFEFEF?style=for-the-badge)
 
 Pair local Plex user accounts with existing Jellyfin users to transfer their personal watch history. This includes watched state, play count, last viewed time, watch progress, and personal ratings where supported.
@@ -140,13 +141,13 @@ Pair local Plex user accounts with existing Jellyfin users to transfer their per
    history with available values from the paired Plex user. Missing Plex
    values do not erase existing Jellyfin data.
    ```
-  5. (a) **Add Queue List to Migration Plan** includes the queued pairs at the end of the metadata migration. Queuing pairs alone does not attach them. If you change the pairings or policy, add the queue to the plan again; attachments must also be added again after restarting the app.
+  5. (a) '**Add Queue List to Migration Plan**' option integrates the queued pairs into the metadata migration plan. If you change user pairings or preserve/overwrite policy afterwards, you need to add the pairs to queue list and then to the plan again. (Even though your user pairings won't be erased after relaunching the app, you still need to press this selection for your list to be re-added to the migration plan.)
 
-  5. (b) **Standalone User History Transfer** transfers user history without repeating the metadata and artwork migration. This can be used after migration, including for additional users. Review the proposed records and exclusions, then confirm **Apply Watch State and Personal Ratings** to write the changes.
+  5. (b) '**Standalone User History Transfer**' option can be used after the migration or before it (if doing this before the complete migration process you still need to 'Harvest' Plex and Jellyfin libraries so the app can fetch the latest user watch history). Typically this option is for times when you change your mind on which Jellyfin user should receive specified Plex user's watch history, or when adding new users.
 
-When history records are copied from Plex items, Jellyfin needs to have the same items to match the data to - which will not be a problem if servers are undergoing migration on the same machine and library files haven't been removed. The 'standalone transfer' selection will bring up a review window before applying watch history. Items without an eligible match are automatically excluded from the transfer.
+When history records are copied from Plex items, Jellyfin needs to have the same items to match the data to - which will not be a problem if servers are running on the same machine and library files haven't been moved/deleted. The 'standalone transfer' selection will bring up a review window before applying watch history - confirm by pressing '**Apply Watch State and Personal Ratings**' to write the change. Items without an eligible match are automatically excluded from the transfer.
 
-This feature transfers data between existing accounts; it does not create new Jellyfin accounts, or copy passwords and permissions.
+*This feature transfers data between existing accounts and does not create new Jellyfin accounts, or copy passwords or permissions.
 
 
 ### ![](https://img.shields.io/badge/-Safety%20Protocol-BED698?style=for-the-badge)
