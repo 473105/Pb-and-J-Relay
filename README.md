@@ -129,13 +129,15 @@ Pair local Plex user accounts with existing Jellyfin users to transfer their per
 3. Check the desired pairs and click **Add Selected Pair to Queue**. Repeat for additional users.
 4. Choose how to handle existing Jellyfin history, with the following options:
    ```text
-   **Preserve existing Jellyfin user's history:** leave an item's existing Jellyfin watch
-   history intact and apply Plex history to items without it. Personal ratings are handled
-   separately: existing ratings are kept and missing ratings can be filled.
+   **Preserve existing Jellyfin user's history:** leave an item's existing
+   Jellyfin watch history intact and apply Plex history to items without it.
+   Personal ratings are handled separately: existing ratings are kept and
+   missing ratings can be filled.
    ```
    ```text
-   **Overwrite with Plex user's history:** replace corresponding Jellyfin history with available
-   values from the paired Plex user. Missing Plex values do not erase existing Jellyfin data.
+   **Overwrite with Plex user's history:** replace corresponding Jellyfin
+   history with available values from the paired Plex user. Missing Plex
+   values do not erase existing Jellyfin data.
    ```
   5. (a) **Add Queue List to Migration Plan** includes the queued pairs at the end of the metadata migration. Queuing pairs alone does not attach them. If you change the pairings or policy, add the queue to the plan again; attachments must also be added again after restarting the app.
 
