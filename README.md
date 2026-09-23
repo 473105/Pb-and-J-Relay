@@ -63,8 +63,10 @@ For convenience, Pb&J Relay can launch Jelly Toast from within the main window a
 
 ## 
 ### Upcoming Features
-~~At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.~~ 
-<br> **Local user history transfer is now implemented, see **User History Transfer** below.**. Ratings are also scraped and ready to be used by Jellyfin API's 1-10 rating system which they never bothered to implement for some reason. However, there are a few Jellyfin extensions that already expose this system, which means we can inject saved plex user ratings into those addons. This will be implemented in a future update.
+~~At the moment Pb&J Relay only gathers the admin user's account history (watched count, resume position, last viewed, personal ratings and favorites). However, a feature is in development for all local Plex account cloning into Jellyfin, and will include account mapping so a user can choose which Plex account should transfer its data into which Jellyfin account.~~ <div align="right">
+Local user history transfer is now implemented! See section 'User History Transfer' below.
+</div>
+Ratings are now also scraped and ready to be used by Jellyfin's 1-10 rating system hidden in its API but never implemented for some reason. However, there are a few excellent Jellyfin extensions built to manipulate this system, which means we could inject saved plex user ratings into Jellyfin user accounts, and those extensions should pick up that data - this will be tested and implemented in a future update.
 
 The next upgrade to that feature would be another lightweight companion app for remote Plex users, which would let them collect their own watch history so this data can be transferred into their Jellyfin account history.
 
@@ -116,7 +118,7 @@ Pb&J Relay can transfer these Plex values to matched Jellyfin items:
 
 Not every Plex field has a perfect Jellyfin equivalent. The migration plan shows what will be applied and what may be skipped or partially applied.
 
-### ![](https://img.shields.io/badge/-User%20History%20Transfer-FFFFFF?style=for-the-badge)
+### ![](https://img.shields.io/badge/-User%20History%20Transfer-EFEFEF?style=for-the-badge)
 
 Pair local Plex user accounts with existing Jellyfin users to transfer their personal watch history. This includes watched state, play count, last viewed time, watch progress, and personal ratings where supported.
 
