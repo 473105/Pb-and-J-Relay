@@ -2,7 +2,7 @@
 
 **Pb&J Relay: Plex-to-Jellyfin Migration Tool** started from a decision of distancing myself from Plex, but after years of curating my libraries, moving to Jellyfin felt like starting from scratch. Sure there was an app here, and an addon there, but they only handled parts of the migration, leaving out much of the data I actually cared about preserving. It's the little things that make your libraries personal, and when you've spent years shaping a library around your watch history with all the small adjustments you've made along the way, it starts to carry personal value. I wanted a way to move to Jellyfin without leaving all of that behind.
 
-This tool is built to preserve that work. It reads Plex and Jellyfin installations, compares the two, lets the user review and revise differences in matches, and then applies the selected Plex metadata to Jellyfin. It also allows the user to start with an absolutely bare Jellyfin server and populates it by fully cloning your Plex metadata and artwork onto it.
+This tool is built to preserve that work. It reads Plex and Jellyfin installations, compares the two, lets the user review and revise differences in matches, and then applies the selected Plex metadata to Jellyfin. It also allows the user to start with an absolutely bare Jellyfin server and populates it by fully cloning your Plex metadata, user watch history, and artwork onto it.
 
 <br>
 
